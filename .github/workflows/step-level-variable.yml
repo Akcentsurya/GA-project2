@@ -1,0 +1,21 @@
+name: STEP-LEVEL VARIABLE
+
+on:  
+  push:
+
+jobs:
+  step-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: step one
+        env: 
+          NAME: Brahma
+        run: |
+          echo $NAME
+
+      - name: step two
+        run: |
+          echo $NAME
+
+        
