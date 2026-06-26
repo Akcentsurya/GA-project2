@@ -10,9 +10,13 @@ jobs:
        NAME: brahma
        CITY: hyderabad
        JOB:  devops
+       COMPANY: openai
+       COUNTRY: INDIA
      steps: 
      - name: print varibales
        run: |
          echo "name = $NAME"
          echo "city = $CITY"
          echo "job = $JOB"
+         echo "country = $COUNTRY"
+         echo "company = $COMPANY"
