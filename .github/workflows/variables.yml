@@ -7,12 +7,12 @@ jobs:
   variable-demo:
      runs-on: ubuntu-latest
      env:
-       NAME= brahma
-       CITY= hyderabad
-       JOB= devops
+       NAME: brahma
+       CITY: hyderabad
+       JOB:  devops
      steps: 
      - name: print varibales
        run: |
-       echo "name = $NAME"
-       echo "city = $CITY"
-       echo "job = $JOB"
+         echo "name = $NAME"
+         echo "city = $CITY"
+         echo "job = $JOB"
