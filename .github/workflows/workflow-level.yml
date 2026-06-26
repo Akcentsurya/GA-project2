@@ -1,0 +1,16 @@
+name: workflow level
+
+on:
+  push:
+env:
+   COMPANY: ERICSON
+jobs:
+  first-job:
+    runs-on: ubuntu-22.04
+    steps: 
+      - run: echo $COMPANY
+
+  second-job: 
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo $COMPANY
