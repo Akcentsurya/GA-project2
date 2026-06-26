@@ -1,0 +1,16 @@
+name: job-level variable
+
+on: 
+  push:
+
+jobs:
+  job-demo:
+     runs-on: ubuntu-22.04
+
+     env:
+       APP: shopping
+     steps:
+       - run: echo $APP
+       - run: echo $APP
+       - run: echo $APP
+       
