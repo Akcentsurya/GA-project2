@@ -17,5 +17,6 @@ jobs:
       - name: step two
         run: |
           echo $NAME
-
+# SECOND STEP ANSWER IS BLANK BECAUSE VARIBALE IS ONLY FOR STEP 1, 
+#IT IS STEP LEVEL .
         
