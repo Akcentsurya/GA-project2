@@ -13,6 +13,6 @@ jobs:
      steps: 
      - name: print varibales
        run: |
-       echo "NAME"= $NAME
-       echo "CITY" = $CITY
-       echo "JOB" = $JOB
+       echo "name = $NAME"
+       echo "city = $CITY"
+       echo "job = $JOB"
