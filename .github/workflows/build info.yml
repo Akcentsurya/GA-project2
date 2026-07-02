@@ -1,26 +1,30 @@
-name: Build infomation
+name: Build Information
 
 on:
   push:
 
 env:
-  APP_NAME: marketingapp
-  VERSION: V1.0.0
+  APP_NAME: ShoppingApp
+  VERSION: v1.0.0
 
 jobs:
-  Build: 
+
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
+
       - uses: actions/checkout@v4
-      - name: Build info
+
+      - name: Print Build Information
+
         run: |
-          echo "Application : ${{ APP_NAME }}"
-          echo "appversion : ${{ VERSION }}"
-          echo "developer  : ${{ github.actor }}"
-          echo "repository : ${{ github.repository }}"
-          echo "branch     : ${{ github.ref_name }}"
-          echo "workflow   : ${{ github.workflow }}"
-          echo "commit     : ${{ github.sha }}"
-          echo "OS         : ${{ github.OS }}"
-        
-        
+          echo "Application : $APP_NAME"
+          echo "Version     : $VERSION"
+          echo "Developer   : ${{ github.actor }}"
+          echo "Repository  : ${{ github.repository }}"
+          echo "Branch      : ${{ github.ref_name }}"
+          echo "Workflow    : ${{ github.workflow }}"
+          echo "OS          : ${{ runner.os }}"
+          echo "Commit      : ${{ github.sha }}"
