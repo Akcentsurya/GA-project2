@@ -1,0 +1,26 @@
+name: Build infomation
+
+on:
+  push:
+
+env:
+  APP_NAME: marketingapp
+  VERSION: V1.0.0
+
+jobs:
+  Build: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build info
+        run: |
+          echo "Application : $APP_NAME"
+          echo "appversion : $VERSION"
+          echo "developer  : ${{ github.actor }}"
+          echo "repository : ${{ github.repository }}"
+          echo "branch     : ${{ github.ref_name }}"
+          echo "workflow   : ${{ github.workflow }}"
+          echo "commit     : ${{ github.sha }}"
+          echo "OS         : ${{ github.os }}"
+        
+        
