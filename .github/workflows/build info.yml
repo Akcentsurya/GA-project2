@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build info
         run: |
-          echo "Application : $APP_NAME"
-          echo "appversion : $VERSION"
+          echo "Application : ${{ APP_NAME }}"
+          echo "appversion : ${{ VERSION }}"
           echo "developer  : ${{ github.actor }}"
           echo "repository : ${{ github.repository }}"
           echo "branch     : ${{ github.ref_name }}"
           echo "workflow   : ${{ github.workflow }}"
           echo "commit     : ${{ github.sha }}"
-          echo "OS         : ${{ github.os }}"
+          echo "OS         : ${{ github.OS }}"
         
         
