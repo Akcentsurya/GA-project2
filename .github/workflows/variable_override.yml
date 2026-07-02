@@ -1,0 +1,22 @@
+name: override demo
+
+on: 
+  push:
+
+env:
+  APP: Ecomerce
+
+jobs:
+  demo:
+     runs-on: ubuntu-22.04
+     env:
+       APP: Banking
+
+     steps: 
+       - run: echo $APP
+       - env:
+           APP: Netflix
+         run: echo $APP
+       - run: echo $APP
+          
+       
